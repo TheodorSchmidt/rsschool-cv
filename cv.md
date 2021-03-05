@@ -43,4 +43,4 @@ void IntegralSimpson(const double a, const double b, const double h, double* res
 ```
 7. I have no work experience
 8. I am studying at the 3rd year of the CSIT department of Saratov State University
-9. B1
+9. B1. I am getting additional education in the field of translator in professional communication.
