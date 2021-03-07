@@ -1,1 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Стили</title>
+  <style>
+    .block {
+      width: auto;
+      height: auto;
+      padding: 20px;
+      margin: 1px;
+      font-size: 20px;
+      border: 2px solid;
+    }
+  </style>
+  <link rel="stylesheet" href="http://htmlbook.ru/mysite.css">
+  <link rel="stylesheet" href="http://www.htmlbook.ru/main.css">
+ </head>
+ <body>
+   <div class="block">
+    <ol>
+      <li>Bogdan Zakharov </br> <a href="http://vfl.ru/fotos/2a4e279c33591261.html"><img src="//images.vfl.ru/ii/1615141239/2a4e279c/33591261_m.jpg" alt="my photo" title="photo" width="400" /></a> </li>
+      <li>Phone number: +79050312252, Email: <a href="bogdan_zakharov_99@mail.ru">bogdan_zakharov_99@mail.ru</a>, Insta: _theodor_schmidt_, <a href="https://vk.com/theodorschmidt"> vk.com</a></li>
+      <li>I want to become a front-end developer. I have no work experience, but I have ambitions and a desire to learn new things. My strengths are self-critical attitude, thoroughness, diligence.</li>
+      <li>Basics of C++, C#, SQL, Python and more.</li>
+      <li>Code examples: <br/> 
+        <code><pre>
+        void IntegralRect(const double a, const double b, const double h, double *res) {
+	int i, n;
+	double sum;
+	double x;
+	n = (int)((b - a) / h);
+	sum = 0.0;
+#pragma omp parallel for private(x) reduction(+:sum)
+	for (i = 0; i < n; i++) {
+		x = a + i * h + h / 2.0;
+		sum += fun(x) * h;
+	}
+	*res = sum;
+}
 
+void IntegralSimpson(const double a, const double b, const double h, double* res) {
+	double temp = a;
+	double x;
+	double sum = fun(a) + fun(b);
+	int n = (int)((b - a) / (2 * h));
+	double sum1 = 0;
+#pragma omp parallel for private(x) reduction(+: sum1)
+	for (int i = 1; i < n; i++) {
+		x = a + (2.0 * i - 1) * h;
+		sum1 += fun(x);
+	}
+	sum += 4 * sum1;
+	double sum2 = 0;
+#pragma omp parallel for private(x) reduction(+: sum2)
+	for (int i = 1; i < n - 1; i++) {
+		x = a + 2.0 * i * h;
+		sum2 += fun(x);
+	}
+	sum += 2 * sum2;
+	sum *= h / 3;
+	*res = sum;
+}
+        </pre></code>
+      </li>
+      <li>I have no work experience.</li>
+      <li>I am studying at the 3rd year of the CSIT department of Saratov State University.</li>
+      <li>B1. I am getting additional education in the field of translator in professional communication.</li>
+    </ol>
+   </div>
+ </body>
+</html>
