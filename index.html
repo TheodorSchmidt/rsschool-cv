@@ -2,7 +2,7 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>Стили</title>
+  <title>HTML, CSS & Git Basics Bogdan Zakharov</title>
   <style>
     .block {
       width: auto;
@@ -13,8 +13,6 @@
       border: 2px solid;
     }
   </style>
-  <link rel="stylesheet" href="http://htmlbook.ru/mysite.css">
-  <link rel="stylesheet" href="http://www.htmlbook.ru/main.css">
  </head>
  <body>
    <div class="block">
@@ -25,7 +23,8 @@
       <li>Basics of C++, C#, SQL, Python and more.</li>
       <li>Code examples: <br/> 
         <code><pre>
-        void IntegralRect(const double a, const double b, const double h, double *res) {
+        void IntegralRect(const double a, const double b, 
+			  const double h, double *res) {
 	int i, n;
 	double sum;
 	double x;
@@ -39,7 +38,8 @@
 	*res = sum;
 }
 
-void IntegralSimpson(const double a, const double b, const double h, double* res) {
+void IntegralSimpson(const double a, const double b, 
+	             const double h, double* res) {
 	double temp = a;
 	double x;
 	double sum = fun(a) + fun(b);
